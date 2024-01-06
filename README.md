@@ -27,3 +27,6 @@ Once the PR is approved and all tests are passing, you can merge it.
 
 ## Realease to production
 Currently we have CI/CD enabled. Once PR is merged to the develop, it will be merged to the main branch. In case of incident, it will be disabled until issue is resolved and commit which cause the issue should be reverted.
+
+## How to use icons
+example https://github.com/tailwindlabs/heroicons?tab=readme-ov-file#react
