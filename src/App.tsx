@@ -36,7 +36,8 @@ function App() {
       size={ButtonSize.Large}
       variant={ButtonVariant.Default}
       color={ButtonColor.Secondary}
-      >button</Button>
+      content={'button'}
+      />
     </>
   )
 }

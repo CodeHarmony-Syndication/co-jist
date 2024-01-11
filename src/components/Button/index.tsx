@@ -1,8 +1,7 @@
-import React from 'react';
 import clsx from 'clsx';
 import { ButtonSize, ButtonVariant, ButtonColor, ButtonProps } from './type';
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = (
   (
     {
       isDisabled,
@@ -11,16 +10,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = ButtonSize.Medium,
       variant = ButtonVariant.Default,
       content,
-    },
-    ref
+    }
   ) => (
     <button
-      ref={ref}
       className={clsx('btn', size, color, variant)}
       disabled={isDisabled}
+      content={content}
     >
       {isLoading && <span className="loading loading-spinner"></span>}
-      {content}
     </button>
   )
 );
