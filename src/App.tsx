@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from './components/Button'
+import { ButtonColor, ButtonSize, ButtonVariant } from './components/Button/type'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,7 +30,13 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Button>button</Button>
+      <Button onClick={() => {
+          console.log('ahoj');
+        }}
+      size={ButtonSize.Large}
+      variant={ButtonVariant.Default}
+      color={ButtonColor.Secondary}
+      >button</Button>
     </>
   )
 }

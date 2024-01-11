@@ -8,18 +8,19 @@ export enum ButtonSize {
 export enum ButtonVariant {
   Default = '',
   Ghost = 'btn-ghost',
-  Disabled = 'btn-disabled',
 }
 
 export enum ButtonColor {
   Primary = 'btn-primary',
   Secondary = 'btn-secondary',
-  Delete = 'btn-error', // ??
+  Delete = 'btn-error',
 }
 
 export type ButtonProps = {
-  loadingState?: '', // ??
+  isLoading?: boolean,
   size?: ButtonSize,
   color?: ButtonColor,
   variant?: ButtonVariant,
+  isDisabled?: boolean,
+  content: string,
 }

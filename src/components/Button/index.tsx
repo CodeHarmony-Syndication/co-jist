@@ -1,21 +1,29 @@
 import React from 'react';
 import clsx from 'clsx';
-import { UseFormRegister, FieldValues } from "react-hook-form";
 import { ButtonSize, ButtonVariant, ButtonColor, ButtonProps } from './type';
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps & ReturnType<UseFormRegister<FieldValues>>>(({
-  loadingState,
-  variant = ButtonVariant.Defaultefault,
-  color = ButtonColor.Primary, 
-  size = ButtonSize.Medium,
-}, ref) => (
-  <button
-    ref={ref} 
-    className={clsx('btn',  ${size}  ${color}  ${variant})}
-  >
-  </button>
-));
-
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      isDisabled,
+      isLoading,
+      color = ButtonColor.Primary,
+      size = ButtonSize.Medium,
+      variant = ButtonVariant.Default,
+      content,
+    },
+    ref
+  ) => (
+    <button
+      ref={ref}
+      className={clsx('btn', size, color, variant)}
+      disabled={isDisabled}
+    >
+      {isLoading && <span className="loading loading-spinner"></span>}
+      {content}
+    </button>
+  )
+);
 
 
 // ## Description
