@@ -1,27 +1,23 @@
-import clsx from 'clsx';
-import { ButtonSize, ButtonVariant, ButtonColor, ButtonProps } from './type';
+import clsx from "clsx";
+import { ButtonSize, ButtonVariant, ButtonColor, ButtonProps } from "./type";
 
-export const Button = (
-  (
-    {
-      isDisabled,
-      isLoading,
-      color = ButtonColor.Primary,
-      size = ButtonSize.Medium,
-      variant = ButtonVariant.Default,
-      content,
-    }
-  ) => (
-    <button
-      className={clsx('btn', size, color, variant)}
-      disabled={isDisabled}
-      content={content}
-    >
-      {isLoading && <span className="loading loading-spinner"></span>}
-    </button>
-  )
+export const Button = ({
+  isDisabled,
+  isLoading,
+  color = ButtonColor.Primary,
+  size = ButtonSize.Medium,
+  variant = ButtonVariant.Default,
+  content,
+  onClick,
+}: ButtonProps) => (
+  <button
+    className={clsx("btn", size, color, variant)}
+    disabled={isDisabled}
+    onClick={onClick}
+  >
+    {isLoading ? <span className="loading loading-spinner"></span> : content}
+  </button>
 );
-
 
 // ## Description
 
