@@ -8,7 +8,7 @@ function App() {
     <>
       <InputField 
         size={InputFieldSize.Large}
-        color={InputFieldColor.Primary}
+        color={InputFieldColor.None}
         variant={InputFieldVariant.Bordered}
         type="text"
         placeholder="Placeholder text"

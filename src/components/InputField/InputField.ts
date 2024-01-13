@@ -10,6 +10,7 @@ export enum InputFieldColor {
   Success = "input-success",
   Warning = "input-warning",
   Error = "input-error",
+  None = "",
 }
 
 export enum InputFieldVariant {
