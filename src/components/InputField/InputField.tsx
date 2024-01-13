@@ -20,7 +20,7 @@ export const InputField = ({
     <input
       type={type}
       placeholder={placeholder}
-      className={clsx(`${size} ${color} ${variant} px-2 h-10`)}
+      className={clsx(`${size} ${color} ${variant} input px-2 h-10`)}
       disabled={isDisabled}
       onChange={onChange}
     />
