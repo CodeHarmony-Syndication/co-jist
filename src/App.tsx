@@ -1,6 +1,6 @@
 import './App.css'
 import { InputField } from './components/InputField/InputField.tsx';
-import { InputFieldColor, InputFieldSize, InputFieldVariant } from './components/InputField/InputField.ts';
+import { InputFieldSize, InputFieldColor, InputFieldVariant } from './components/InputField/InputField.ts';
 
 function App() {
 
@@ -8,10 +8,11 @@ function App() {
     <>
       <InputField 
         size={InputFieldSize.Large}
-        variant={InputFieldVariant.Default}
         color={InputFieldColor.Secondary}
+        variant={InputFieldVariant.Bordered}
         type="text"
         placeholder="Search..."
+        labelText="Click on me"
       />
     </>
   )

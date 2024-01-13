@@ -1,20 +1,26 @@
 import clsx from 'clsx';
-import { InputFieldSize, InputFieldVariant, InputFieldColor, InputFieldProps } from './InputField';
+import { InputFieldSize, InputFieldColor, InputFieldVariant, InputFieldProps } from './InputField';
 
 export const InputField = ({
   isDisabled,
-  color = InputFieldColor.Primary,
   size = InputFieldSize.Medium,
-  variant = InputFieldVariant.Default,
+  color = InputFieldColor.Primary,
+  variant = InputFieldVariant.Bordered,
   onChange,
   type,
-  placeholder
+  placeholder,
+  labelText
 }: InputFieldProps) => (
-  <input
-    type={type}
-    placeholder={placeholder}
-    className={clsx(`${color} ${size} ${variant}`)}
-    disabled={isDisabled}
-    onChange={onChange}
-  />
+  <label className="form-control w-full max-w-xs">
+    <div className="label">
+      <span className="label-text">{labelText}</span>
+    </div>
+    <input
+      type={type}
+      placeholder={placeholder}
+      className={clsx(`${size} ${color} ${variant}`)}
+      disabled={isDisabled}
+      onChange={onChange}
+    />
+  </label>
 );

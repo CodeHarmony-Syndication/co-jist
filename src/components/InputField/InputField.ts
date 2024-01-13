@@ -1,20 +1,20 @@
 export enum InputFieldSize {
-  Medium = "",
   Small = "input-sm",
+  Medium = "input-md",
   Large = "input-lg",
-}
-
-export enum InputFieldVariant {
-  Default = "",
-  Ghost = "input-ghost",
 }
 
 export enum InputFieldColor {
   Primary = "input-primary",
   Secondary = "input-secondary",
-  Succes = "input-success",
+  Success = "input-success",
   Warning = "input-warning",
   Error = "input-error",
+}
+
+export enum InputFieldVariant {
+  Bordered = "input-bordered",
+  Ghost = "input-ghost",
 }
 
 export type InputFieldProps = {
@@ -25,4 +25,5 @@ export type InputFieldProps = {
   onChange?: () => void;
   type?: string;
   placeholder?: string;
+  labelText?: string;
 };
