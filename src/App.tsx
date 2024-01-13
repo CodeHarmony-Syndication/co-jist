@@ -8,11 +8,12 @@ function App() {
     <>
       <InputField 
         size={InputFieldSize.Large}
-        color={InputFieldColor.Secondary}
+        color={InputFieldColor.Primary}
         variant={InputFieldVariant.Bordered}
         type="text"
-        placeholder="Search..."
-        labelText="Click on me"
+        placeholder="Placeholder text"
+        isDisabled={false}
+        label="Text label"
       />
     </>
   )

@@ -25,5 +25,5 @@ export type InputFieldProps = {
   onChange?: () => void;
   type?: string;
   placeholder?: string;
-  labelText?: string;
+  label?: string;
 };
