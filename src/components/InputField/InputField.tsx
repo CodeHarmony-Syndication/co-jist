@@ -10,19 +10,28 @@ export const InputField = ({
   placeholder,
   isDisabled,
   label
-}: InputFieldProps) => (
-  <label className="form-control w-full max-w-xs">
-    {label && (
-    <div className="label">
-      <span className="label-text">{label}</span>
-    </div>
-    )}
-    <input
-      type={type}
-      placeholder={placeholder}
-      className={clsx(`${size} ${color} ${variant} input px-2 h-10`)}
-      disabled={isDisabled}
-      onChange={onChange}
-    />
-  </label>
-);
+}: InputFieldProps) => {
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    console.log(event.target.value);
+  };
+
+  return (
+    <label className="form-control w-full max-w-xs">
+      {label && (
+        <div className="label">
+          <span className="label-text">{label}</span>
+        </div>
+      )}
+      <input
+        type={type}
+        placeholder={placeholder}
+        className={clsx(`${size} ${color} ${variant} input px-2 h-10`)}
+        disabled={isDisabled}
+        onChange={handleChange}
+      />
+    </label>
+  );
+};
