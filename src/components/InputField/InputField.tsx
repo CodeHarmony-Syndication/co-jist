@@ -1,4 +1,7 @@
 import clsx from 'clsx';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+
 import { InputFieldSize, InputFieldColor, InputFieldVariant, InputFieldProps } from './InputField';
 
 export const InputField = ({
@@ -11,6 +14,8 @@ export const InputField = ({
   isDisabled,
   label
 }: InputFieldProps) => {
+
+  const form = useForm();
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement>
