@@ -1,12 +1,11 @@
+import React from 'react';
 import { CheckboxProps } from './Checkbox';
 
-const Checkbox = ({
+export const Checkbox = ({
   checked
-}:CheckboxProps) => {
-
+  }:CheckboxProps) => {
+  
   return (
     <input type="checkbox" checked={checked} className="checkbox" />
   )
 }
-
-export default Checkbox

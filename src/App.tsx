@@ -1,5 +1,5 @@
 import './App.css';
-import Checkbox from './components/Checkbox/Checkbox.tsx';
+import { Checkbox } from './components/Checkbox/Checkbox.tsx';
 
 function App() {
 
