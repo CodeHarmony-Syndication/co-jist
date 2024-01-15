@@ -5,7 +5,10 @@ function App() {
 
   return (
     <>
-      <Checkbox checked={true} />
+      <Checkbox
+        label="Remember me"
+        checked={true}
+      />
     </>
   )
 }
