@@ -9,7 +9,9 @@ export const Checkbox = ({
   return (
     <div className="form-control">
       <label className="label cursor-pointer">
+      {label && (
         <span className="label-text">{label}</span> 
+      )}
         <input type="checkbox" checked={checked} className="checkbox" />
       </label>
     </div>
