@@ -1,3 +1,10 @@
+export enum InputFieldType {
+  Email = "email",
+  Date = "date",
+  Password = "password",
+  Text = "text",
+}
+
 export enum InputFieldSize {
   Small = "input-sm",
   Medium = "input-md",
@@ -24,7 +31,7 @@ export type InputFieldProps = {
   variant?: InputFieldVariant;
   isDisabled?: boolean;
   onChange?: () => void;
-  type?: string;
+  type?: InputFieldType;
   placeholder?: string;
   label?: string;
 };

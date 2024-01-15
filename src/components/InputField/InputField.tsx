@@ -2,15 +2,15 @@ import clsx from 'clsx';
 import React from 'react';
 import { UseFormRegister, FieldValues } from 'react-hook-form';
 
-import { InputFieldSize, InputFieldColor, InputFieldVariant, InputFieldProps } from './InputField';
+import { InputFieldType, InputFieldSize, InputFieldColor, InputFieldVariant, InputFieldProps } from './InputField';
 
 export const InputField = React.forwardRef<HTMLInputElement, InputFieldProps & ReturnType<UseFormRegister<FieldValues>>>(
   ({
+    type = InputFieldType.Text,
     size = InputFieldSize.Medium,
     color = InputFieldColor.Primary,
     variant = InputFieldVariant.Bordered,
     onChange,
-    type,
     placeholder,
     isDisabled,
     label
