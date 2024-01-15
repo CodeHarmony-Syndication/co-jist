@@ -15,6 +15,12 @@ export enum ButtonColor {
   Delete = "btn-error",
 }
 
+export enum ButtonType {
+  Submit = 'submit',
+  Reset = 'reset',
+  Text = 'text',
+}
+
 export type ButtonProps = {
   isLoading?: boolean;
   size?: ButtonSize;
@@ -22,5 +28,6 @@ export type ButtonProps = {
   variant?: ButtonVariant;
   isDisabled?: boolean;
   content: string;
+  attribute?: ButtonType;
   onClick?: () => void;
 };
