@@ -1,7 +1,10 @@
+import clsx from 'clsx';
 import React, { useState } from 'react';
-import { CheckboxProps } from './Checkbox';
+import { CheckboxSize, CheckboxColor, CheckboxProps } from './Checkbox';
 
 export const Checkbox = ({
+    size = CheckboxSize.Medium,
+    color = CheckboxColor.Primary,
     onChange,
     label,
     checked
@@ -15,15 +18,16 @@ export const Checkbox = ({
   };
 
   return (
-    <div className="form-control">
-      <label className="label cursor-pointer">
+    <div className="form-control just">
+      <label className="label cursor-pointer justify-start gap-2">
       {label && (
         <span className="label-text">{label}</span> 
       )}
         <input type="checkbox"
           checked={isChecked}
           onChange={handleChange}
-          className="checkbox" />
+          className={clsx(`${size} ${color} checkbox`)}
+        />
       </label>
     </div>
   )
