@@ -1,19 +1,16 @@
-import './App.css'
-import { InputField } from './components/InputField/InputField.tsx';
-import { InputFieldType, InputFieldSize, InputFieldColor, InputFieldVariant } from './components/InputField/InputField.ts';
+import './App.css';
+import { InputFile } from './components/InputFile/InputFile.tsx';
+import { InputFileSize, InputFileColor, InputFileVariant } from './components/InputFile/InputFile.ts';
 
 function App() {
 
   return (
     <>
-      <InputField 
-        size={InputFieldSize.Large}
-        color={InputFieldColor.None}
-        variant={InputFieldVariant.Bordered}
-        type={InputFieldType.Text}
-        placeholder="Placeholder text"
-        isDisabled={false}
-        label="Text label"
+      <InputFile
+        size={InputFileSize.Medium}
+        color={InputFileColor.None}
+        variant={InputFileVariant.Bordered}
+        label="Pick a file"
       />
     </>
   )
