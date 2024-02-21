@@ -27,6 +27,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
+        <ruby>B<rt>annotation</rt></ruby>
       </p>
     </>
   )
