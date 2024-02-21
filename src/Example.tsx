@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>This is example site</h1>
+      <h1>This is an example site</h1>
       <div>
         <TextArea /> 
       </div>   

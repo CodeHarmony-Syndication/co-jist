@@ -2,13 +2,13 @@ import clsx from 'clsx'
 import React from 'react'
 import { TextAreaProps, TextAreaSize ,TextAreaOption } from '../types/type.ts'
 
-export const TextArea =({text, placeholder, size = TextAreaSize.Medium}
-) => {
+export const TextArea =({text, placeholder, size = TextAreaSize.Medium}) => {
+
+
     return(
     <form>
-        <label htmlFor="textarea-title" className=""></label>
-        <textarea placeholder="Napište text" className={clsx('textarea', size)}>{text}</textarea>
-        <button>Odeslat</button>
+        <textarea id="textarea-title" placeholder="Napište text" className={clsx('textarea', size)}>{text}</textarea>
+        <label htmlFor="textarea-title"></label>
     </form>
 )
 }
